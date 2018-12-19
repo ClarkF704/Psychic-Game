@@ -18,6 +18,7 @@ if (randomLetter === userGuess) { //if we win
     document.getElementById("letter").textContent=letGuess;//javascript goes into html and sets the ID letter to a empty array
     reTempt = 10;// attempts gets reset to 10
     document.getElementById("attempt").textContent=reTempt;//javascript goes into html and resets attempts to zero
+    randomLetter = letters[Math.floor(Math.random() * letters.length)];
 }
 if ((randomLetter !== userGuess)&&(letters.includes(userGuess))&&(!letGuess.includes(userGuess))) { //if the computers guess doesnt equal our guess, letters that we type can only be from our letters array, we document the letters that are typed
     letGuess.push(userGuess); // this puts the letters we type in the empty array of userGuess
@@ -32,6 +33,7 @@ if (reTempt === 0){
     document.getElementById("letter").textContent=loser;
     reTempt = 10;
     document.getElementById("attempt").textContent=reTempt;
+    randomLetter = letters[Math.floor(Math.random() * letters.length)];
 
 }
 
